@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<style>
+    div{
+        text-align: center;
+        border: 5px solid black;
+        border-radius: 25px;
+        width: 37vw;
+        background-image: linear-gradient(white, gray);
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    body{
+        margin-left: 630px;
+        margin-top: 10vh;
+        background-image: url(https://correiodeitapetininga.com.br/wp-content/uploads/2021/04/etec-scaled-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        }
+        h1{
+            color: black;
+            background-color: rgb(105, 105, 105);
+            border: solid 3px black;
+            border-radius: 5px;
+            margin: 50px;
+            font-size: 50px;
+        }
+        h2{
+            color: white;
+            background-color: rgb(151, 151, 151);
+            border-radius: 5px;
+            margin: 100px;
+            font-size: 30px;
+        }
+        input{
+            color: white;
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+        input:hover{
+            color: black;
+            background-color: rgb(255, 255, 255);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+       h2:hover{
+        color: black;
+        background-color: rgb(122, 127, 134);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 10px;
+       }
+       #mostrar1{
+        color: aliceblue;
+        font-size: 25px;
+        background-color: transparent;
+        border: 3px white solid;
+       }
+       #mostrar{
+        color: aliceblue;
+        font-size: 25px;
+        background-color: transparent ;
+        border: 3px white solid;
+       }
+       h1:hover{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       button{
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+       }
+       button:hover{
+        background-color: rgb(126, 126, 126);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+</style>
+<body>
+    <div>
+        <h1>ETEC</h1>
+        <h2>Nome do Aluno</h2>
+        <input type="text" id="nome">
+        <h2>Primeira Nota</h2>
+        <input type="number" id="nota1">
+        <h2>Segunda Nota</h2>
+        <input type="number" id="nota2">
+        <br>
+        <button onclick="Media()">Gerar Media</button>
+        <h2>Nome do Aluno:</h2>
+        <h1 id="mostrar"></h1>
+        <h2>Meida do Aluno:</h2>
+        <h1 id="mostrar1"></h1>
+    </div>
+
+    <script>
+        function Media(){
+         let nome = document.getElementById("nome").value
+         let Nota1 = document.getElementById("nota1").value
+         let Nota2 = document.getElementById("nota2").value
+
+         let Media = Number(Nota1+Nota2)
+         document.getElementById("mostrar").innerHTML = nome
+         document.getElementById("mostrar1").innerHTML = Media
+        }
+    </script>
+</body>
+</html>
